@@ -7,13 +7,17 @@ let playerLosses = 0;
 
 let playerGuesses = 9;
 
+let userGuesses = [];
+
 
 document.onkeyup = function(event) {
     console.log(event.key)
 
-    var userGuess = event.key
+    let userGuess = event.key
 
-    var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+    let computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+
+    
 
     console.log(computerGuess);
 
@@ -26,6 +30,8 @@ document.onkeyup = function(event) {
     if (userGuess === computerGuess) {
         playerGuesses=9;
         playerWins++;
+        userGuesses=[];
+        alert("Correct! You win this round!")
 
         
     
@@ -33,6 +39,10 @@ document.onkeyup = function(event) {
 
     } else {
         playerGuesses--
+        userGuesses.push(userGuess);
+
+
+
 
         
 
@@ -43,12 +53,31 @@ document.onkeyup = function(event) {
     if (playerGuesses === 0 ) {
         playerLosses++;
         playerGuesses=playerGuesses+9;
+        userGuesses = [];
+        alert("Incorrect! You lose this round!")
     }
+
+    if (playerWins === 5) {
+        alert("Game Over! You win!")
+        playerLosses = 0;
+        playerWins = 0;
+        userGuesses = [];
+        playerGuesses = 0;
+    }
+
+    if (playerLosses === 10) {
+        alert("Too many losses! BOO! You lose! Game Over!")
+        playerLosses = 0;
+        playerWins = 0;
+        userGuesses = [];
+        playerGuesses = 0;
+    }
+
 
     document.getElementById('wins').innerHTML = 'Wins: ' + playerWins;
     document.getElementById('losses').innerHTML = 'Losses: ' + playerLosses;
     document.getElementById('guessesLeft').innerHTML = 'Guesses Remaining: ' + playerGuesses;
-    document.getElementById('guessesSoFar').innerHTML = 'Guesses So Far: ' + userGuess;
+    document.getElementById('guessesSoFar').innerHTML = 'Guesses So Far: ' + userGuesses;
 }
 
 

@@ -7,21 +7,25 @@
   <title>Psychic Game</title>
 
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
     <header>
-        <h1>Psychic Game</h1>
+      <div class="jumbotron m-4 border border-secondary p-3">
+        <h1 class="display-4 text-center p-0">Phsychic Game</h1>
+        <p class="lead text-center mt-4 p-0">Guess what letter I'm thinking ... If you win 5 times, you are victorious! If you lose 10 times, you fail!</p>
+      </div>
     </header>
 
     <p>
-        <h2>Guess what letter I'm thinking ...</h2>
+        <h2 class="text-center">Guess what letter I'm thinking ...</h2>
 
-        <h3 id=wins>Wins :</h3>
-        <h3 id=losses>Losses :</h3>
-        <h3 id=guessesLeft>Guesses Remaining :</h3>
-        <h3 id=guessesSoFar>Guesses So Far : </h3>
+        <h3 id=wins class="text-success">Wins :</h3>
+        <h3 id=losses class="text-danger">Losses :</h3>
+        <h3 id=guessesLeft class="text-info">Guesses Remaining :</h3>
+        <h3 id=guessesSoFar class="text-info">Guesses So Far : </h3>
 
     </p>
   <script src="./assets/javascript/game.js"></script>
