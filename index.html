@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="bg-light">
     <header>
       <div class="jumbotron m-4 border border-secondary p-3">
         <h1 class="display-4 text-center p-0">Phsychic Game</h1>
@@ -19,15 +19,31 @@
       </div>
     </header>
 
-    <p>
-        <h2 class="text-center">Guess what letter I'm thinking ...</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 m-3 mb-4">
+          <h2 class="text-center font-italic">"Guess what letter I'm thinking ..."</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row m-auto">
+        <div class="col-md-2 m-auto border border-success">
+            <h5 id=wins class="text-success text-left mb-3 font-weight-bold">Wins:</h5>
+        </div>
+        <div class="col-md-2 m-auto border border-danger">
+            <h5 id=losses class="text-danger text-left mb-3 font-weight-bold">Losses:</h5>
+        </div>
+        <div class="col-md-3 m-auto border border-info">
+            <h5 id=guessesLeft class="text-info text-left mb-3 font-weight-bold">Guesses Remaining:</h5>
+        </div>
+        <div class="col-md-4 m-auto border border-info">
+            <h5 id=guessesSoFar class="text-info text-left mb-3 font-weight-bold">Guesses So Far:</h5>
+        </div>
+    </div>
 
-        <h3 id=wins class="text-success m-4">Wins :</h3>
-        <h3 id=losses class="text-danger m-4">Losses :</h3>
-        <h3 id=guessesLeft class="text-info m-4">Guesses Remaining :</h3>
-        <h3 id=guessesSoFar class="text-info m-4">Guesses So Far : </h3>
 
-    </p>
+    </div>
   <script src="./assets/javascript/game.js"></script>
 </body>
 </html>

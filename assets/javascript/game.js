@@ -11,21 +11,11 @@ let userGuesses = [];
 
 
 document.onkeyup = function(event) {
-    console.log(event.key)
 
     let userGuess = event.key
 
     let computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
-    
-
-    console.log(computerGuess);
-
-    console.log(playerWins);
-
-    console.log(playerLosses);
-
-    console.log(playerGuesses);
 
     if (userGuess === computerGuess) {
         playerGuesses=9;
@@ -72,6 +62,10 @@ document.onkeyup = function(event) {
         userGuesses = [];
         playerGuesses = 0;
     }
+
+
+
+
 
 
     document.getElementById('wins').innerHTML = 'Wins: ' + playerWins;
