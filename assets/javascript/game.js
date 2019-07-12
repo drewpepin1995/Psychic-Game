@@ -16,6 +16,7 @@ function resetGame() {
     playerWins = 0;
     playerGuesses = 9;
     userGuesses = [];
+    updateComputerGuess();
 }
 
 function updateComputerGuess () {
@@ -34,7 +35,6 @@ document.onkeyup = function(event) {
     if (possibleChoices.indexOf(userGuess) === -1) {
         alert('Please enter a character [a-z]!');
         resetGame();
-        updateComputerGuess();
 
     };
 
@@ -64,12 +64,12 @@ document.onkeyup = function(event) {
     if (playerWins === 5) {
         alert("Game Over! You win!")
         resetGame();
-        updateComputerGuess();
+        
     };
      if (playerLosses === 10) {
         alert("Too many losses! BOO! You lose! Game Over!")
         resetGame();
-        updateComputerGuess();
+        
     };
 
 
