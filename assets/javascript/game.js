@@ -33,13 +33,15 @@ document.onkeyup = function(event) {
         playerGuesses=playerGuesses+9;
         userGuesses = [];
         alert("Incorrect! You lose this round!")
-    } else if (playerWins === 5) {
+    };
+    if (playerWins === 5) {
         alert("Game Over! You win!")
         playerLosses = 0;
         playerWins = 0;
         userGuesses = [];
         playerGuesses = 0;
-    } else if (playerLosses === 10) {
+    };
+     if (playerLosses === 10) {
         alert("Too many losses! BOO! You lose! Game Over!")
         playerLosses = 0;
         playerWins = 0;
