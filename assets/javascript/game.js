@@ -1,12 +1,9 @@
 
 let possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
+let computerGuess = '';
 let playerWins = 0;
-
 let playerLosses = 0;
-
 let playerGuesses = 9;
-
 let userGuesses = [];
 
 function resetGame() {
@@ -16,11 +13,15 @@ function resetGame() {
   playerGuesses = 0;
 }
 
+function updateComputerGuess() {
+  computerGuess = possibleChoices[Math.floor(Math.random() * possibleChoices.length)]
+}
+
+updateComputerGuess();
+
 document.onkeyup = function(event) {
-
+    console.log(computerGuess);
     let userGuess = event.key
-
-    let computerGuess = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
 
     if (possibleChoices.indexOf(userGuess) === -1) {
       alert('Please enter a character [a-z]!');
@@ -29,7 +30,8 @@ document.onkeyup = function(event) {
         playerGuesses=9;
         playerWins++;
         userGuesses=[];
-        alert("Correct! You win this round!")
+        updateComputerGuess();
+        alert("Correct! You win this round!");
       } else {
         playerGuesses--
         userGuesses.push(userGuess);
