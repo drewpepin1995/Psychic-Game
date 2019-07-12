@@ -27,11 +27,9 @@ updateComputerGuess();
 
 document.onkeyup = function(event) {
 
-    console.log(computerGuess)
 
     let userGuess = event.key
 
-    console.log(userGuess)
 
     if (possibleChoices.indexOf(userGuess) === -1) {
         alert('Please enter a character [a-z]!');
