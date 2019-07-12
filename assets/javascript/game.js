@@ -23,20 +23,9 @@ document.onkeyup = function(event) {
         userGuesses=[];
         alert("Correct! You win this round!")
 
-        
-    
-  
-
     } else {
         playerGuesses--
         userGuesses.push(userGuess);
-
-
-
-
-        
-
-
         
     };
 
