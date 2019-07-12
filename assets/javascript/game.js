@@ -16,7 +16,6 @@ document.onkeyup = function(event) {
 
     let computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
-
     if (userGuess === computerGuess) {
         playerGuesses=9;
         playerWins++;
@@ -34,23 +33,21 @@ document.onkeyup = function(event) {
         playerGuesses=playerGuesses+9;
         userGuesses = [];
         alert("Incorrect! You lose this round!")
-    }
-
-    if (playerWins === 5) {
+    } else if (playerWins === 5) {
         alert("Game Over! You win!")
         playerLosses = 0;
         playerWins = 0;
         userGuesses = [];
         playerGuesses = 0;
-    }
-
-    if (playerLosses === 10) {
+    } else if (playerLosses === 10) {
         alert("Too many losses! BOO! You lose! Game Over!")
         playerLosses = 0;
         playerWins = 0;
         userGuesses = [];
         playerGuesses = 0;
-    }
+    };
+
+
 
 
 
