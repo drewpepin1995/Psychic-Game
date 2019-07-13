@@ -36,6 +36,7 @@ document.onkeyup = function(event) {
         alert('Please enter a character [a-z]!');
         resetGame();
 
+
     };
 
 
